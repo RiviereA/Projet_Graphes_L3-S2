@@ -38,7 +38,7 @@ vector<int> GetV(int v){    //Obtient les voisin du sommet v
     return V;
 }
 
-void BronKerbosch(vector<int> R, vector<int> P, vector<int> X){
+void BronKerBosch(vector<int> R, vector<int> P, vector<int> X){
     if((P.size() == 0) && (X.size() == 0) && (R.size()>1)){
         printf("Clique maximale :");
         vector<int> clique;
@@ -58,7 +58,7 @@ void BronKerbosch(vector<int> R, vector<int> P, vector<int> X){
         int v = P[i];
         vector<int> N = GetV(v);
         R.push_back(v);
-        BronKerbosch(R,Intersect(P1,N),Intersect(X,N));
+        BronKerBosch(R,Intersect(P1,N),Intersect(X,N));
         P1 = Suppr(P1,v);
         R = Suppr(R,v);
         X.push_back(v);
@@ -148,7 +148,7 @@ int main(int argc, char *argv[]){
         P.push_back(i);
     }
     vector<int> X;
-    BronKerbosch(R,P,X);
+    BronKerBosch(R,P,X);
 
     int tailleCliqM = 0;
     for (int i=0; i<listClique.size(); i++)
