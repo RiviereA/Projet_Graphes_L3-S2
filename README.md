@@ -4,12 +4,12 @@ Le but du projet était d’implanter l’algorithme de Bron-Kerbosch pour affic
 
 ## Génération de graphe aléatoire
 
-Il fut décidé de commencer par programmer la génération de graphe aléatoire afin de pouvoir s’en servir pour tester les méthodes ***FloydWarshall*** et ***BronKerbosch***.
+Il fut décidé de commencer par programmer la génération de graphe aléatoire afin de pouvoir s’en servir pour tester les méthodes ***FloydWarshall*** et ***BronKerBosch***.
 
 La fonction ***Generegraphe*** prend en paramètre la probabilité (comprise entre 0 et 100 inclus) qu’il y ai ou non une arrête entre deux sommets. 
 
 Cette méthode remplie deux matrices d’adjacence :
-- **adj** (de taille **n** * **n**) pour la méthode ***Bronkerbosh*** avec des 1 en cas d’arêtes et 0 sinon
+- **adj** (de taille **n** * **n**) pour la méthode ***BronkerBosh*** avec des 1 en cas d’arêtes et 0 sinon
 - **W** (de taille **n** * **n**) identique à **adj** à ceci près que la valeur **n** remplace les 0 étant donné que l’algorithme de Floyd-Warshall fonctionne par comparaisons de valeurs infinies. La distance maximale entre 2 points étant de **n**-1, la valeur **n** a été choisie pour représenter l’infini.
 
 ## Puissance éxacte d’un graphe
@@ -22,7 +22,7 @@ Une fois la matrice de plus courts chemins réalisée, il ne reste plus qu’à 
 
 ## Algo de Bron-Kerbosh
 
-La méthode ***BronKerbosch*** réalisée permet d’afficher la liste de toutes les cliques maximales, en outre elle remplie une liste stockant les cliques maximales rencontrées afin de déterminer la ou les cliques maximum ainsi que leur taille.
+La méthode ***BronKerBosch*** réalisée permet d’afficher la liste de toutes les cliques maximales, en outre elle remplie une liste stockant les cliques maximales rencontrées afin de déterminer la ou les cliques maximum ainsi que leur taille.
 Les variables passées en paramètres de cette méthode sont des listes de sommets utilisé lors de l’exécution récursive de la manière suivante :
     • **R** contient les sommets faisant déjà partie de la clique.
     • **P** contient tous les sommets voisins du sommet en cours de traitement.
