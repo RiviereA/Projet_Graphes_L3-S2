@@ -1,4 +1,4 @@
-# Projet de Graphes (L3 - semestre 2)
+# Projet de Graphes (Licence 3 - semestre 2)
 
 Le but du projet était d’implanter l’algorithme de Bron-Kerbosch pour afficher toutes les cliques maximum d’un graphe non orienté, puis de l’appliquer sur des graphes généré aléatoirement. 
 
